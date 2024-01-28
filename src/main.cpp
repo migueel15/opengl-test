@@ -108,11 +108,11 @@ int main(int argc, char *argv[]) {
   while (!glfwWindowShouldClose(window)) {
     check_exit(window);
 
-    glClearColor(0.2f, 0.3f, 0.3f, 0.2f);
+    glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT);
 
+    // glBindVertexArray(VAO); //es necesario?
     glUseProgram(shaderProgram);
-    glBindVertexArray(VAO);
     glDrawArrays(GL_TRIANGLES, 0, sizeof(vertices) / sizeof(float));
 
     glfwSwapBuffers(window);
